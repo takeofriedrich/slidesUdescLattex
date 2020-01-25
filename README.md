@@ -6,7 +6,7 @@ Recomenda-se compilar pela plataforma Overleaf.
 
 Necessário BibTex. Os comandos para a compilação são:
 
-pdflatex main.tex main.pdf
-bibtex main
-pdflatex main.tex main.pdf
-pdflatex main.tex main.pdf
+pdflatex main.tex main.pdf \n
+bibtex main \n
+pdflatex main.tex main.pdf \n
+pdflatex main.tex main.pdf \n
