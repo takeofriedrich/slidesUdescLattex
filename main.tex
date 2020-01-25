@@ -29,7 +29,7 @@
   language=Java,                 % the language of the code
   morekeywords={*,...},            % if you want to add more keywords to the set
   numbers=none,                    % where to put the line-numbers; possible values are (none, left, right)
-  numbersep=0pt,                   % how far the line-numbers are from the code
+  numbersep=0,                   % how far the line-numbers are from the code
    rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
   showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
   showstringspaces=false,          % underline spaces within strings only
@@ -53,7 +53,7 @@
 \subtitulo{Subtitulo}
 \newcommand{\autor}{Vinicius Takeo Friedrich Kuwaki}
 \newcommand{\github}{github.com/takeofriedrich}
-\newcommand{\email}{vinicius.kuwaki@edu.udesc.br}
+\newcommand{\email}{vtkwki@gmail.com}
 \newcommand{\website}{}
 \frase{Frase do dia}
 \universidade{Universidade do Estado de Santa Catarina}
@@ -137,7 +137,7 @@
 
 \begin{frame}{Apenas Imagem}
 
-    \imagem{figuras/golden.jpg}{Dog}{Imagem de um Golden}
+    \imagem{figuras/golden.jpg}{Dog2}{Imagem de um Golden}
     
 \end{frame}
 
@@ -212,34 +212,10 @@ x_2 = \frac{-b - \sqrt{b^2 - 4ac}}{2a}
     Exemplo de citação: \cite{github}
 \end{frame}
 
-    \begin{frame}{Estrutura de Topicos}
-        
-        \begin{itemize}
-            \item Texto % Adicione o texto do topico
-        \end{itemize}
-        
-    \end{frame}
-    
-    \begin{frame}{Estrutura de Topicos}
-        
-        \begin{itemize}
-            \item Adicionado subtopicos
-            \begin{itemize}
-                \item Tópico dentro de tópico
-            \end{itemize}
-        \end{itemize}
-        
-    \end{frame}
-
-
-
-
-\nocite{github}
-
 \begin{frame}[allowframebreaks]
         \frametitle{Referencias}
         \bibliographystyle{abntex2-alf}
-        \bibliography{referencias}
+        \bibliography{referencias.bib}
         
 \end{frame}
 
