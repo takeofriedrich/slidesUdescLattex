@@ -3,9 +3,9 @@
 % Pacote de estilo da UDESC
 \usepackage{style/udesc}
 \usepackage{listings}
+\usepackage{hyperref}
 \setbeamertemplate{itemize items}[circle]
 \usepackage[abnt-emphasize=bf,abnt-and-type=e,alf]{abntex2cite}%Citações ABNT
-\usepackage{amsmath}
 
 % Incluir arquivos da pasta figuras
 \graphicspath{{./figuras/}}
@@ -29,7 +29,7 @@
   language=Java,                 % the language of the code
   morekeywords={*,...},            % if you want to add more keywords to the set
   numbers=none,                    % where to put the line-numbers; possible values are (none, left, right)
-  numbersep=0,                   % how far the line-numbers are from the code
+  numbersep=0pt,                   % how far the line-numbers are from the code
    rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
   showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
   showstringspaces=false,          % underline spaces within strings only
@@ -38,10 +38,9 @@
   tabsize=1,	                   % sets default tabsize to 2 
   basicstyle=\fontsize{7}{8}\selectfont\ttstyle,
   keywordstyle=\color{blue},
-  commentstyle=\ttfamily\small\color{gray},
+  commentstyle=\fontsize{7}{8}\selectfont\ttstyle\color{gray},
   stringstyle=\color{orange},
 }
-
 
 % Início do documento
 \begin{document}
@@ -55,7 +54,7 @@
 \newcommand{\github}{github.com/takeofriedrich}
 \newcommand{\email}{vtkwki@gmail.com}
 \newcommand{\website}{}
-\frase{Frase do dia}
+\frase{}
 \universidade{Universidade do Estado de Santa Catarina}
 \capa
 
@@ -66,165 +65,22 @@
     \end{frame}}
 
 
-\section{Tutorial}
-
-\subsection{Slide Simples}
-
-\begin{frame}{Introdução}
-\lipsum[75]
-\end{frame}
-
-
-\subsection{Tópicos}
-\subsubsection{Estrutura}
-
-\begin{frame}{Estrutura de Tópicos}
-
-    \begin{itemize}
-        \item Tópico 1.
-            \begin{itemize}
-                \item Tópico 1.1
-                    \begin{itemize}
-                        \item Tópico 1.1.1
-                        \item Tópico 1.1.2 
-                    \end{itemize}
-            \end{itemize}
-    \end{itemize}
-    
-\end{frame}
-
-\subsubsection{Fadding}
-
-\begin{frame}{Fadding de Tópicos}
-    \begin{itemize}
-        \item Tópico 1 \pause
-        \item Tópico 2 \pause
-        \item Tópico 3 
-    \end{itemize}
-\end{frame}
-
-
-%%
-%%	Remover o número de páginas do slide com [plain]
-%%
-
-\subsection{Tipos de Slides}
-\subsubsection{Texto sem número de páginas}
-
-\begin{frame}[plain]{Sem número de páginas}
-\lipsum[1]
-\end{frame}
-
-
-\subsubsection{Texto com imagem ao lado}
-%%
-%%	Você pode usar mais de uma coluna! Inclusão automatizada de imagens com \imagem{arquivo}{label}{legenda}
-%%
-\begin{frame}{Texto em duas colunas}
-  \begin{columns}[c]
-    \begin{column}{.5\textwidth}
-
-	Exemplo de imagem
-
-    \end{column}
-    \begin{column}{.5\textwidth}
-
-	\imagem{figuras/golden.jpg}{Dog}{Imagem de um Golden}
-
-    \end{column}
-  \end{columns}
-\end{frame}
-
-\begin{frame}{Apenas Imagem}
-
-    \imagem{figuras/golden.jpg}{Dog2}{Imagem de um Golden}
-    
-\end{frame}
-
-\subsubsection{Caixas de Texto}
-
-%%
-%%	Caixas de texto
-%%
-\begin{frame}{Caixas de Texto}
-
-\begin{block}{Bloco Normal}
-Conteúdo do bloco normal.
-\end{block}
-
-\begin{alertblock}{Bloco de Alerta}
-Conteúdo do bloco de alerta.
-\end{alertblock}
-
-\begin{exampleblock}{Bloco de Exemplo}
-Conteúdo do bloco de exemplo
-\end{exampleblock}
-
-\end{frame}
-
-\subsubsection{Equações}
-
-%%
-%%	Equações
-%%
-\begin{frame}{Equações}
-
-Observe a Equação \ref{eq:sum}.
-
-% Iniciar ambiente equation
-\begin{equation}\label{eq:sum}
-\sum_{n=1}^\infty \frac{1}{n^2} = \lim_{n \to \infty} \left( \frac{1}{1^2} + \frac{1}{2^2} + \cdots + \frac{1}{n^2} \right) = \frac{\pi^2}{6}
-\end{equation}
-
-Observe as Equações \ref{eq:bhaskara}.
-
-% Iniciar ambiente split dentro de equation para várias linhas
-\begin{equation}\label{eq:bhaskara}
-\begin{split}
-x_1 = \frac{-b + \sqrt{b^2 - 4ac}}{2a} \\
-x_2 = \frac{-b - \sqrt{b^2 - 4ac}}{2a}
-\end{split}
-\end{equation}
-
-\end{frame}
-
-\subsubsection{Código-Fonte}
-
-\defverbatim[colored]\lstI{
-\begin{lstlisting}[language=Java,basicstyle=\ttfamily,keywordstyle=\color{blue}]
-    class Main{
-    
-        public static void main(String[] args){
-            
-            System.out.println("Hello World");
-        
-        }
-    
-    }
-\end{lstlisting}
-}
-
-\begin{frame}{Código Fonte}{Java}
-\lstI
-\end{frame}
-
-\begin{frame}{Titulo do slide}
-    Exemplo de citação: \cite{github}
-\end{frame}
+\nocite{github}
 
 \begin{frame}[allowframebreaks]
         \frametitle{Referencias}
         \bibliographystyle{abntex2-alf}
-        \bibliography{referencias.bib}
+        \bibliography{Referencias.bib}
         
 \end{frame}
 
-\contato{Contato: \\
+\contato{Duvidas: \\
 \autor{} \\
 \email{} \\
 \github{} \\
 \website{}
 }
-\capadetras{Obrigado!}
+
+\capadetras{}
 
 \end{document}
